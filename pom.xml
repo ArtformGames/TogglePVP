@@ -10,19 +10,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-        <project.package>${project.groupId}.plugin.template</project.package>
+        <project.package>${project.groupId}.plugin.${project.groupId}</project.package>
     </properties>
     <groupId>com.artformgames</groupId>
-    <artifactId>TemplateSinglePlugin</artifactId>
+    <artifactId>togglepvp</artifactId>
     <version>1.0.0</version>
 
-    <name>TemplateSinglePlugin</name>
+    <name>TogglePVP</name>
     <description>
-        An efficient and fair verification plugin for whitelisted servers,
-        which supports players to submit whitelist requests by themselves
-        and be reviewed by all players who have passed.
+        Let players decide whether to enable PVP!
     </description>
-    <url>https://github.com/ArtformGames/TemplateSinglePlugin</url>
+    <url>https://github.com/ArtformGames/TogglePVP</url>
 
     <developers>
         <developer>
@@ -51,20 +49,20 @@
 
     <ciManagement>
         <system>GitHub Actions</system>
-        <url>https://github.com/ArtformGames/TemplateSinglePlugin/actions/workflows/maven.yml</url>
+        <url>https://github.com/ArtformGames/TogglePVP/actions/workflows/maven.yml</url>
     </ciManagement>
 
     <distributionManagement>
-        <downloadUrl>https://github.com/ArtformGames/TemplateSinglePlugin/releases</downloadUrl>
+        <downloadUrl>https://github.com/ArtformGames/TogglePVP/releases</downloadUrl>
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/ArtformGames/TemplateSinglePlugin</url>
+            <url>https://maven.pkg.github.com/ArtformGames/TogglePVP</url>
         </repository>
         <snapshotRepository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/ArtformGames/TemplateSinglePlugin</url>
+            <url>https://maven.pkg.github.com/ArtformGames/TogglePVP</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -101,7 +99,7 @@
         <dependency>
             <groupId>com.artformgames</groupId>
             <artifactId>artcore-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -111,7 +109,6 @@
             <version>1.20.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-
 
         <dependency>
             <groupId>me.clip</groupId>
@@ -211,7 +208,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <finalName>${project.name}-${project.parent.version}</finalName>
+                    <finalName>${project.name}-${project.version}</finalName>
                     <outputDirectory>${project.basedir}/.asset/</outputDirectory>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
                     <relocations>

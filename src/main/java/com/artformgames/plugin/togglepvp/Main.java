@@ -1,11 +1,13 @@
-package com.artformgames.plugin.template;
+package com.artformgames.plugin.togglepvp;
 
 import cc.carm.lib.easyplugin.EasyPlugin;
 import cc.carm.lib.mineconfiguration.bukkit.MineConfiguration;
 import com.artformgames.core.utils.GHUpdateChecker;
-import com.artformgames.plugin.template.conf.PluginConfig;
-import com.artformgames.plugin.template.conf.PluginMessages;
-import org.bstats.bukkit.Metrics;
+import com.artformgames.plugin.togglepvp.command.TogglePVPCommand;
+import com.artformgames.plugin.togglepvp.conf.PluginConfig;
+import com.artformgames.plugin.togglepvp.conf.PluginMessages;
+import com.artformgames.plugin.togglepvp.handler.PVPHandler;
+import dev.rollczi.litecommands.bukkit.LiteCommandsBukkit;
 
 public class Main extends EasyPlugin {
 
@@ -16,28 +18,22 @@ public class Main extends EasyPlugin {
     }
 
     protected MineConfiguration configuration;
+    protected LiteCommandsBukkit commands;
 
     @Override
-    protected void load() {
+    protected boolean initialize() {
 
         log("Loading plugin configurations...");
         configuration = new MineConfiguration(this);
         configuration.initializeConfig(PluginConfig.class);
         configuration.initializeMessage(PluginMessages.class);
-    }
-
-    @Override
-    protected boolean initialize() {
 
         log("Register listeners...");
+        registerListener(new PVPHandler());
 
         log("Register commands...");
+        registerCommand(getName(), new TogglePVPCommand());
 
-
-        if (PluginConfig.METRICS.getNotNull()) {
-            log("Initializing bStats...");
-            new Metrics(this, 0);
-        }
 
         if (PluginConfig.CHECK_UPDATE.getNotNull()) {
             log("Start to check the plugin versions...");
@@ -47,13 +43,6 @@ public class Main extends EasyPlugin {
         }
 
         return true;
-    }
-
-    @Override
-    protected void shutdown() {
-
-        log("Shutting down...");
-
     }
 
     @Override

@@ -15,3 +15,15 @@ depend:
 
 softdepend:
   - PlaceholderAPI
+
+permissions:
+  "togglepvp.use":
+    description: "Allows the player to toggle PVP status"
+    default: true
+
+commands:
+  "TogglePVP":
+    description: "Toggle PVP status"
+    usage: "/togglepvp"
+    permission: "togglepvp.use"
+    aliases: [ "pvp" ]

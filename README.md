@@ -2,41 +2,28 @@
 
 ```
 
-README LANGUAGES [ [**English**](README.md) | [中文](README_CN.md)  ]
+README LANGUAGES [ [**English**](README.md) ]
 
-![CodeSize](https://img.shields.io/github/languages/code-size/ArtformGames/TemplateSinglePlugin)
-[![Download](https://img.shields.io/github/downloads/ArtformGames/TemplateSinglePlugin/total)](https://github.com/ArtformGames/TemplateSinglePlugin/releases)
-[![Java CI with Maven](https://github.com/ArtformGames/TemplateSinglePlugin/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/ArtformGames//actions/workflows/maven.yml)
+![CodeSize](https://img.shields.io/github/languages/code-size/ArtformGames/TogglePVP)
+[![Download](https://img.shields.io/github/downloads/ArtformGames/TogglePVP/total)](https://github.com/ArtformGames/TogglePVP/releases)
+[![Java CI with Maven](https://github.com/ArtformGames/TogglePVP/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/ArtformGames//actions/workflows/maven.yml)
 ![Support](https://img.shields.io/badge/Minecraft-Java%201.16--Latest-green)
 
-# **TemplateSinglePlugin**
+# **TogglePVP**
 
-> Slogan
-
-Descriptions
-
-## Features & Advantages
-
-## Screenshots
+SLet players decide whether to enable PVP!
 
 ## Dependencies
 
+- **[Necessary]** Develop based on [ArtCore](https://github.com/ArtformGames/ArtCore) .
 - **[Recommend]** Placeholders based on [PlaceholderAPI](https://www.spigotmc.org/resources/6245/) .
 
 For development dependencies, please
-see  [Dependencies](https://github.com/ArtformGames/TemplateSinglePlugin/network/dependencies) .
+see  [Dependencies](https://github.com/ArtformGames/TogglePVP/network/dependencies) .
 
 ## Commands
 
-The main command is `/TemplateSinglePlugin` or `/tsp`.
-
-```text
-
-# subcommand <force-arg> <optional-arg>
-@ Player command
-- Description
-
-```
+Use `/pvp` or `/TogglePVP` to toggle pvp status.
 
 ## Configurations
 
@@ -51,13 +38,9 @@ Will be generated on the first boot up.
 ## Permissions
 
 ```text
-# TemplateSinglePlugin.admin
-- The permissions for all admin commands and functions.
+# TogglePVP.use
+- The permissions to use toggle command.
 ```
-
-## Statistics
-
-[![bStats](https://bstats.org/signatures/bukkit/TemplatePlugin.svg)](https://bstats.org/plugin/bukkit/TemplatePlugin/18946)
 
 ## Open Source Licence
 
@@ -68,5 +51,5 @@ The source code of this project adopts the [GNU General Public License v3.0](htt
 This project is mainly developed by the [Artfrom Games](https://github.com/ArtformGames/) .
 
 Many thanks to Jetbrains for kindly providing a license for us to work on this and other open-source projects.  
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/ArtformGames/TemplateSinglePlugin)
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/ArtformGames/TogglePVP)
 
