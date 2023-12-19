@@ -78,8 +78,11 @@
         </repository>
 
         <repository>
-            <id>github</id>
+            <id>artcore-repo</id>
             <url>https://maven.pkg.github.com/ArtformGames/ArtCore</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
 
         <repository>
